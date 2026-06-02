@@ -1350,6 +1350,7 @@ html[data-lang="es"] .lang-en {
 }
 
 .section-inner .section-head p,
+.section-inner:not(.section-inner--center) .section-head p,
 .section-inner .subsection-title,
 .section-inner .price-table-title {
   margin-left: auto;
