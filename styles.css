@@ -1526,3 +1526,32 @@ html[data-lang="es"] .lang-en {
 .conditions-grid {
   gap: 1.5rem;
 }
+
+/* ============================================================
+   Centered wrapping for box grids: an orphan box on the last
+   row stays centered relative to the boxes above it. Applies
+   to any future box added to these grids too.
+   ============================================================ */
+.conditions-grid,
+.method-grid,
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.conditions-grid > .condition-block {
+  flex: 1 1 20rem;
+  max-width: 24rem;
+}
+
+.method-grid > .method-step {
+  flex: 1 1 18rem;
+  max-width: 22rem;
+}
+
+.team-grid > .team-card {
+  flex: 1 1 22rem;
+  max-width: 26rem;
+}
