@@ -1424,7 +1424,7 @@ html[data-lang="es"] .lang-en {
   text-align: center;
 }
 
-/* Audience list -> centered pills */
+/* Audience list -> centered block, dashes aligned on one axis */
 .audience-list {
   max-width: 42rem;
   margin-left: auto;
@@ -1432,7 +1432,12 @@ html[data-lang="es"] .lang-en {
 }
 
 .audience-list li {
-  justify-content: center;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.audience-list li::before {
+  width: 1rem;
   text-align: center;
 }
 
