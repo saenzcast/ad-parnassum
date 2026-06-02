@@ -1334,12 +1334,18 @@ html[data-lang="es"] .lang-en {
    Centered, uniform boxed layout for all informational blocks
    ============================================================ */
 
-/* Center every section's content (headings + intro copy) */
+/* Center every section's content (headings + intro copy).
+   These selectors match the specificity of the earlier left-align
+   rules and come later in the file, so they win. */
 .section-inner,
+.section-inner:not(.section-inner--center) .section-head h2,
+.section-inner:not(.section-inner--center) .section-head p,
 .section-inner .section-head h2,
 .section-inner .section-head p,
 .section-inner .subsection-title,
-.section-inner .price-table-title {
+.section-inner .price-table-title,
+.price-table-title,
+.subsection-title {
   text-align: center;
 }
 
@@ -1366,13 +1372,18 @@ html[data-lang="es"] .lang-en {
   text-align: center;
 }
 
+/* Lists: the <ul> block is centered as a whole (inline-block inside a
+   text-align:center parent), but its text is left-aligned so every
+   bullet point lines up on the same vertical axis. */
 .prose-block ul,
 .prose-block ol {
-  list-style: none;
-  padding: 0;
+  display: inline-block;
+  list-style: disc;
+  list-style-position: outside;
+  padding: 0 0 0 1.3rem;
   margin: 0.5rem auto 1.25rem;
   max-width: 40rem;
-  text-align: center;
+  text-align: left;
 }
 
 .prose-block li {
@@ -1380,8 +1391,14 @@ html[data-lang="es"] .lang-en {
   line-height: 1.6;
 }
 
+.prose-block li::marker {
+  color: var(--color-accent);
+}
+
 .prose-block ul ul {
-  margin: 0.5rem auto;
+  display: block;
+  list-style: circle;
+  margin: 0.5rem 0;
 }
 
 /* Tables centered with centered cell text */
@@ -1453,13 +1470,22 @@ html[data-lang="es"] .lang-en {
 }
 
 .modality-list {
-  list-style: none;
-  padding: 0;
-  text-align: center;
+  display: inline-block;
+  align-self: center;
+  list-style: disc;
+  list-style-position: outside;
+  padding: 0 0 0 1.3rem;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .modality-list li {
   margin-bottom: 0.55rem;
+}
+
+.modality-list li::marker {
+  color: var(--color-accent);
 }
 
 .team-card p {
@@ -1467,13 +1493,21 @@ html[data-lang="es"] .lang-en {
 }
 
 .condition-block ul {
-  list-style: none;
-  padding: 0;
-  text-align: center;
+  display: inline-block;
+  list-style: disc;
+  list-style-position: outside;
+  padding: 0 0 0 1.3rem;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .condition-block li {
   margin-bottom: 0.5rem;
+}
+
+.condition-block li::marker {
+  color: var(--color-accent);
 }
 
 /* Inventory inline cards (Cables / Soportes) center their headings */
