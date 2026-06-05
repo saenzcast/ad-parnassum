@@ -1693,3 +1693,52 @@ html[data-lang="es"] .lang-en {
   color: var(--color-accent-hover);
   border: 1px solid var(--color-accent);
 }
+
+/* ============================================================
+   Callouts & emphasis (instrument rental, conditions, key terms)
+   ============================================================ */
+.callout {
+  background: var(--color-gold-soft);
+  border: 1px solid var(--color-gold);
+  border-left: 4px solid var(--color-gold);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1.2rem;
+  margin: 1rem auto;
+  max-width: 52rem;
+  color: var(--color-text);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  text-align: center;
+}
+
+.callout strong {
+  color: var(--color-gold);
+}
+
+/* Conditions: make the whole block stand out */
+.conditions-title {
+  color: var(--color-gold) !important;
+  text-shadow: 0 0 14px rgba(212, 167, 44, 0.35);
+}
+
+.conditions-important > .condition-block {
+  border: 1px solid var(--color-gold);
+  box-shadow: 0 0 0 1px rgba(212, 167, 44, 0.25), 0 8px 24px rgba(0, 0, 0, 0.35);
+  background: linear-gradient(180deg, rgba(212, 167, 44, 0.06), var(--color-bg-elevated) 60%);
+}
+
+.conditions-important > .condition-block h4 {
+  color: var(--color-gold);
+}
+
+/* Key term line highlighted inside a condition block */
+.condition-highlight {
+  list-style: none;
+  margin-left: -1.3rem;
+  padding: 0.6rem 0.85rem;
+  background: var(--color-gold-soft);
+  border: 1px solid var(--color-gold);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  font-weight: 700;
+}
