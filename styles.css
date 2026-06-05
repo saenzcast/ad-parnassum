@@ -1615,3 +1615,81 @@ html[data-lang="es"] .lang-en {
   text-align: center;
   margin: 0.85rem auto 0;
 }
+
+/* ============================================================
+   Highlights: featured package + most-common rate rows
+   Gold = main push (Básico package & Session) · Green = Hourly
+   ============================================================ */
+:root {
+  --color-gold: #d4a72c;
+  --color-gold-soft: rgba(212, 167, 44, 0.13);
+}
+
+/* Featured package card (01 · Básico) */
+.package-card.package-featured {
+  border: 2px solid var(--color-gold);
+  background: linear-gradient(180deg, rgba(212, 167, 44, 0.10), var(--color-bg-elevated) 55%);
+  box-shadow: 0 0 0 1px var(--color-gold), 0 12px 34px rgba(212, 167, 44, 0.20);
+  position: relative;
+  overflow: visible;
+  margin-top: 0.6rem;
+}
+
+.package-card.package-featured h4 {
+  color: var(--color-gold) !important;
+}
+
+.featured-badge {
+  position: absolute;
+  top: -0.85rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-gold);
+  color: #1c1500;
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.28rem 0.8rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  box-shadow: 0 4px 14px rgba(212, 167, 44, 0.35);
+}
+
+/* Rate rows: Session (gold, main push) and Hourly (green) */
+.price-table tr.rate-session > td {
+  background: var(--color-gold-soft);
+}
+.price-table tr.rate-session td:first-child {
+  box-shadow: inset 4px 0 0 var(--color-gold);
+}
+.price-table tr.rate-hour > td {
+  background: rgba(77, 158, 77, 0.14);
+}
+.price-table tr.rate-hour td:first-child {
+  box-shadow: inset 4px 0 0 var(--color-accent-hover);
+}
+
+/* Inline tags */
+.rate-tag {
+  display: inline-block;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.12rem 0.45rem;
+  border-radius: 999px;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.rate-tag-session {
+  background: var(--color-gold);
+  color: #1c1500;
+}
+.rate-tag-hour {
+  background: var(--color-accent-soft);
+  color: var(--color-accent-hover);
+  border: 1px solid var(--color-accent);
+}
