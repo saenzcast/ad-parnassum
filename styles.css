@@ -290,6 +290,30 @@ a:hover {
   to   { opacity: 1; transform: none; }
 }
 
+.hero-subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2.4vw, 1.35rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-accent-hover);
+  margin: -0.5rem auto 0.85rem;
+  text-align: center;
+  max-width: 40rem;
+}
+
+.hero-meta {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  margin: 0 auto 0.35rem;
+  text-align: center;
+  max-width: 38rem;
+  line-height: 1.5;
+}
+
+.hero-meta:last-of-type {
+  margin-bottom: 1.75rem;
+}
+
 .hero-eyebrow {
   font-size: 0.75rem;
   letter-spacing: 0.28em;
@@ -1557,6 +1581,6 @@ html[data-lang="es"] .lang-en {
 }
 
 .team-grid > .team-card {
-  flex: 1 1 22rem;
-  max-width: 26rem;
+  flex: 1 1 15rem;
+  max-width: 24rem;
 }
