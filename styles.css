@@ -1719,6 +1719,14 @@ html[data-lang="es"] .lang-en {
 .conditions-title {
   color: var(--color-gold) !important;
   text-shadow: 0 0 14px rgba(212, 167, 44, 0.35);
+  font-size: clamp(1.6rem, 4vw, 2.4rem) !important;
+}
+
+.conditions-title .rate-tag {
+  display: block;
+  width: fit-content;
+  margin: 0.7rem auto 0;
+  font-size: 0.7rem;
 }
 
 .conditions-important > .condition-block {
